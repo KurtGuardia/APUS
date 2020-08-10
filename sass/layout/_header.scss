@@ -1,14 +1,33 @@
 .header {
+  width: 100%;
+  max-width: 100vw;
   height: 93vh;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba($color-primary, 0.515),
-      rgba($color-primary, 0.5)
-    ),
-    url(../img/bike_landscape2.jpg);
+  background-position: center;
   background-size: cover;
-  background-position: top;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  animation: slideBg 15s linear infinite 0s;
+  animation-timing-function: cubic-bezier(1, 0, 0.3, 1);
+  background-attachment: fixed;
+  z-index: -1;
   position: relative;
+
+  //Commmented out beacuse of the implementation of Slides
+  
+  // background-image: linear-gradient(
+  //     to right bottom,
+  //     rgba($color-primary, 0.515),
+  //     rgba($color-primary, 0.5)
+  //   ),
+  //   url(../img/bike_landscape2.jpg);
+
+  // @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (min-width: 125em), only screen and  (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em) {
+  //     background-image: linear-gradient(
+  //         to right bottom,
+  //         rgba($color-primary-light, 0.815),
+  //         rgba($color-primary-dark, 0.8) ),
+  //     url(../img/bike_landscape2-large.jpg);
+  // }
 
   // To make a relative cut at the bottom of the header:
 
@@ -18,18 +37,24 @@
   //     height: 95vh;
   // }
 
-  // @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (min-width: 125em), only screen and  (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em) {
-  //     background-image: linear-gradient(
-  //         to right bottom,
-  //         rgba($color-primary-light, 0.815),
-  //         rgba($color-primary-dark, 0.8) ),
-  //     url(../img/bike_landscape2.jpg);
-  // }
-
   // @include respond(phone) {
   //     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
   //     clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
   // }
+
+  .filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary, 0.515),
+      rgba($color-primary, 0.5)
+    );
+  }
 
   &__logo-box {
     position: absolute;

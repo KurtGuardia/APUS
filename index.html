@@ -57,20 +57,22 @@
     </div>
 
     <header class="header">
-      <div class="header__logo-box">
-        <img src="img/imagotipo_white.svg" alt="Apu's imagotype" />
-      </div>
+      <div class="filter">
+        <div class="header__logo-box">
+          <img src="img/imagotipo_white.svg" alt="Apu's imagotype" />
+        </div>
 
-      <div class="header__text-box">
-        <svg class="header__text-box--icon">
-          <use xlink:href="img/sprite.svg#logotipo"></use>
-        </svg>
+        <div class="header__text-box">
+          <svg class="header__text-box--icon">
+            <use xlink:href="img/sprite.svg#logotipo"></use>
+          </svg>
 
-        <!-- AQUI ESTABA un <h1> main y sub -->
+          <!-- AQUI ESTABA un <h1> main y sub -->
 
-        <a href="#tours" class="btn btn--white btn--animated"
-          >Descubre nuestros productos!</a
-        >
+          <a href="#tours" class="btn btn--white btn--animated"
+            >Descubre nuestros productos!</a
+          >
+        </div>
       </div>
     </header>
 
@@ -387,7 +389,10 @@
                 Mejorando un poco cada día!
               </h3>
               <p>
-                Quería mejorar mi cuerpo y mente, encontré en <em>APUS</em> un servicio magnífico, los productos de primera calidad y un atención fenomenal. Los servicios complementarios son ideales para realmente mejorar día a día. Los recomiendo totalmente.
+                Quería mejorar mi cuerpo y mente, encontré en <em>APUS</em> un
+                servicio magnífico, los productos de primera calidad y un
+                atención fenomenal. Los servicios complementarios son ideales
+                para realmente mejorar día a día. Los recomiendo totalmente.
               </p>
             </div>
           </div>
@@ -405,7 +410,7 @@
               <form action="#" class="form">
                 <div class="u-margin-bottom-medium">
                   <h2 class="heading-secondary">
-                    Start booking now
+                    Reserva tus productos ahora!
                   </h2>
                 </div>
                 <div class="form__group">
@@ -413,10 +418,10 @@
                     type="text"
                     id="name"
                     class="form__input"
-                    placeholder="Full name"
+                    placeholder="Nombre"
                     required
                   />
-                  <label for="name" class="form__label">Full name</label>
+                  <label for="name" class="form__label">Nombre</label>
                 </div>
 
                 <div class="form__group">
@@ -424,13 +429,35 @@
                     type="email"
                     id="email"
                     class="form__input"
-                    placeholder="Email address"
+                    placeholder="Email"
                     required
                   />
-                  <label for="email" class="form__label">Email address</label>
+                  <label for="email" class="form__label">Email</label>
                 </div>
 
-                <div class="form__group u-margin-bottom-medium">
+                <div class="form__group">
+                  <input
+                    type="number"
+                    id="phone"
+                    class="form__input"
+                    placeholder="Teléfono"
+                    required
+                  />
+                  <label for="email" class="form__label">Teléfono</label>
+                </div>
+
+                <div class="form__group">
+                  <textarea
+                    rows="4"
+                    id="message"
+                    name="message"
+                    class="form__input"
+                    placeholder="Indica que productos deseas (separados por comas) y nosotros nos ponemos en contacto contigo."
+                    required
+                  ></textarea>
+                </div>
+
+                <!-- <div class="form__group u-margin-bottom-medium">
                   <div class="form__radio-group">
                     <input
                       type="radio"
@@ -456,10 +483,12 @@
                       Large tour group
                     </label>
                   </div>
-                </div>
+                </div> -->
 
                 <div class="form__group">
-                  <button class="btn btn--green">Nest step &rarr;</button>
+                  <button class="btn btn--green" type="submit">
+                    Enviar &rarr;
+                  </button>
                 </div>
               </form>
             </div>

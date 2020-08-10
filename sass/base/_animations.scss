@@ -41,3 +41,23 @@
         transform: translateY(0);
     }
 }
+
+//Added for the header img gallery transition
+
+@keyframes slideBg {
+    0% {
+        background-image: 
+        url(../img/bike_landscape2-large.jpg);
+    }
+    33% {
+        background-image: 
+        url(../img/home2-large.jpg);
+    }
+    66% {
+        background-image: 
+        url(../img/yoga3-large.jpg);
+    }
+    100% {
+      background-image: url(../img/nat-6-small.jpg);
+    }
+  }
