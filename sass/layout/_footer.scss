@@ -1,7 +1,7 @@
 .footer {
     background-color: $color-secondary-dark;
     padding: 10rem 0;
-    font-size: 1.4rem;
+    font-size: 2.4rem;
     color: $color-grey-light-1;
 
     @include respond(tab-port) {
@@ -10,7 +10,7 @@
 
     &__logo-box {
         text-align: center;
-        margin-bottom: 8rem;
+        // margin-bottom: 8rem;
 
         @include respond(tab-port){
             margin-bottom: 6rem;
@@ -18,8 +18,13 @@
     }
 
     &__logo {
-        width: 15rem;
+        width: 25rem;
         height: auto;
+    }
+
+    //This was added beacause a single quote didn't fullfilled te space good enough
+    .row{
+        max-width: 140rem;
     }
 
     &__navigation {
@@ -51,7 +56,7 @@
         &:link,
         &:visited{
             color: $color-grey-light-1;
-            background-color: $color-grey-dark-3;
+            // background-color: $color-grey-dark-3;
             text-decoration: none;
             text-transform: uppercase;
             display: inline-block;
@@ -60,7 +65,8 @@
 
         &:hover,
         &:active {
-            color: $color-primary;
+            // color: $color-primary;
+            color: rgba(207, 163, 16, 0.876);
             box-shadow: 0 1rem 2rem rgba($color-black, .4);
             transform: rotate(5deg) scale(1.3);
         }

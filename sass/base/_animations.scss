@@ -1,63 +1,60 @@
 @keyframes moveInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-10rem);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
 
-    80% {
-        transform: translate(2rem);
-    }
+  80% {
+    transform: translate(2rem);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes moveInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(10rem);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
 
-    80% {
-        transform: translate(-1rem);
-    }
+  80% {
+    transform: translate(-1rem);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes moveInBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(5rem);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 //Added for the header img gallery transition
 
 @keyframes slideBg {
-    0% {
-        background-image: 
-        url(../img/bike_landscape2-large.jpg);
-    }
-    33% {
-        background-image: 
-        url(../img/home2-large.jpg);
-    }
-    66% {
-        background-image: 
-        url(../img/yoga3-large.jpg);
-    }
-    100% {
-      background-image: url(../img/nat-6-small.jpg);
-    }
+  0% {
+    background-image: url(../img/bike_landscape2-large.jpg);
   }
+  33% {
+    background-image: url(../img/yoga3-large.jpg);
+  }
+  66% {
+    background-image: url(../img/home2-large.jpg);
+  }
+  100% {
+    background-image: url(../img/nat-6-small.jpg);
+  }
+}

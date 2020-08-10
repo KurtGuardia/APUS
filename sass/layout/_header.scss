@@ -6,10 +6,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   backface-visibility: hidden;
-  animation: slideBg 15s linear infinite 0s;
-  animation-timing-function: cubic-bezier(1, 0, 0.3, 1);
+  animation: slideBg 10s ease-in-out infinite 0s;
   background-attachment: fixed;
-  z-index: -1;
   position: relative;
 
   //Commmented out beacuse of the implementation of Slides
@@ -48,7 +46,7 @@
     left: 0;
     width: 100%;
     max-width: 100vw;
-    height: 100vh;
+    height: 93vh;
     background-image: linear-gradient(
       to right bottom,
       rgba($color-primary, 0.515),
