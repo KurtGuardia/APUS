@@ -313,7 +313,7 @@ body {
       padding: 2rem; } }
   .feature-box__icon {
     font-size: 6rem;
-    margin-bottom: .5rem;
+    margin-bottom: 4rem;
     display: inline-block;
     background-image: linear-gradient(to right, #3fd16f, #209e5b);
     -webkit-background-clip: text;
