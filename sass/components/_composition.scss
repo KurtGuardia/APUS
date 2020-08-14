@@ -1,80 +1,87 @@
 .composition {
-    
-    position: relative;
+  position: relative;
 
-    &__photo {
-        width: 55%;
-        box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
-        border-radius: 2px;
-        position: absolute;
-        z-index: 10;
-        transition: all .8s;
-        outline-offset: 2rem;
+  &__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all 0.8s;
+    outline-offset: 2rem;
 
-        @include respond(tab-port) {
-            float: left;
-            position: relative;
-            width: 33.333333%;
-            box-shadow: 0 1.5rem 3rem rgba($color-black, .2);
-        }
-    
-        &--p1{
-            left: 0;
-            top: -3rem;
-
-            @include respond(tab-port) {
-                top: 1.5rem;
-                transform: scale(1.1)
-            }
-        }
-
-        &--p2{
-            right: 5%;
-            top: 0rem;            
-
-            @include respond(tab-port) {
-                top: -1rem;
-                transform: scale(1.3);
-                z-index: 100;
-            }
-        }
-
-        &--p3{
-            left: 20%;
-            top: 23rem;
-            z-index: 20;
-
-            @include respond(tab-port) {
-                left: 0;
-                top: 3.5rem;
-                transform: scale(1)
-            }
-        }
-
-        // This next pic was added
-
-        &--p4{
-            right: -20%;
-            top: 15rem;
-
-            @include respond(tab-port) {
-                left: 0;
-                top: 3.5rem;
-                transform: scale(1)
-            }
-        }
-
-        &:hover {
-            outline: 1.5rem solid $color-primary;
-            transform: scale(1.05) translateY(-5rem);
-            box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
-            z-index: 30;
-        }
-
+    @include respond(tab-port) {
+      float: left;
+      position: relative;
+      width: 33.333333%;
+      box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
     }
 
-    &:hover &__photo:not(:hover){
-        transform: scale(.9);
+    &--p1 {
+      left: 0;
+      top: -3rem;
+
+      @include respond(tab-port) {
+        top: 1.5rem;
+        transform: scale(1.1);
+      }
     }
 
+    &--p2 {
+      right: 5%;
+      top: 0rem;
+
+      //Added because of the new image
+      @include respond(tab-land) {
+        top: -5rem;
+      }
+      
+      @include respond(tab-port) {
+        top: -1rem;
+        transform: scale(1.3);
+        z-index: 100;
+      }
+    }
+
+    &--p3 {
+      left: 20%;
+      top: 23rem;
+      z-index: 20;
+
+      @include respond(tab-port) {
+        left: 0;
+        top: 3.5rem;
+        transform: scale(1);
+      }
+    }
+
+    // This next pic was added
+
+    &--p4 {
+      right: -15%;
+      top: 11rem;
+
+      //needed because it fall out the page
+      @include respond(tab-land) {
+        right: 0%;
+      }
+
+      @include respond(tab-port) {
+        left: 0;
+        top: 3.5rem;
+        transform: scale(1);
+      }
+    }
+
+    &:hover {
+      outline: 1.5rem solid $color-primary;
+      transform: scale(1.05) translateY(-5rem);
+      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+      z-index: 30;
+    }
+  }
+
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.9);
+  }
 }
