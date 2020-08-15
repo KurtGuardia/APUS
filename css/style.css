@@ -178,17 +178,22 @@ body {
   text-align: center;
   margin-bottom: 5rem; }
   .filter-btn .buttons li {
+    width: max-content;
     display: inline-block;
     padding: 0 1rem;
     color: #777;
     font-size: 1.6rem;
-    border-radius: 5px;
     margin: 0px 15px;
     cursor: pointer;
-    transition: transform .5s; }
+    transition: transform 0.5s; }
     .filter-btn .buttons li:hover:not(.active) {
       transform: translateY(-1rem);
-      border-bottom: 1px solid; }
+      text-decoration: underline; }
+  .filter-btn .buttons .prox::before {
+    content: "Proximamente";
+    color: crimson;
+    transform: translateX(3rem) rotate(-30deg);
+    display: inline-block; }
   .filter-btn .buttons .active {
     background-color: #60b950c0;
     color: #fff;
@@ -233,6 +238,15 @@ body {
       color: #3fd16f; }
     .product:hover small {
       transform: scale(1.3); }
+  .product.soon {
+    filter: grayscale(0.5); }
+    .product.soon::before {
+      content: "Proximamente";
+      position: absolute;
+      font-size: 5rem;
+      background-color: #60b950c0;
+      color: #fff;
+      transform: translate(-50%, 90%) rotate(30deg); }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -1088,7 +1102,7 @@ body {
       padding: 10rem 0; } }
 
 .book {
-  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/muscles.jpg);
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/muscles-large.jpg);
   background-size: 100%;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25); }
@@ -1097,11 +1111,11 @@ body {
       background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/muscles-large.jpg); } }
   @media only screen and (max-width: 75em) {
     .book {
-      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(../img/muscles-large.jpg);
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(../img/muscles.jpg);
       background-size: cover; } }
   @media only screen and (max-width: 56.25em) {
     .book {
-      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url(../img/muscles-large.jpg); } }
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url(../img/muscles.jpg); } }
   .book__form {
     width: 50%;
     padding: 6rem; }
