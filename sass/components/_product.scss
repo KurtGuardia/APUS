@@ -9,11 +9,12 @@
 
     li {
       width: max-content;
+      min-width: 23rem;
       display: inline-block;
       padding: 0 1rem;
       color: $color-grey-dark;
       font-size: $default-font-size;
-      margin: 0px 15px;
+      margin: 8px 15px;
       cursor: pointer;
       transition: transform 0.5s;
 
@@ -22,12 +23,12 @@
         text-decoration: underline;
       }
     }
-    
+
     .prox::before {
       content: "Proximamente";
-      color: crimson;
-      transform: translateX(3rem) rotate(-30deg) ;
-      display:inline-block;
+      color: $color-tertiary-light;
+      transform: translateX(3rem) rotate(-30deg);
+      display: inline-block;
     }
 
     .active {
@@ -53,6 +54,8 @@
   box-shadow: 1rem 0.8rem 1rem rgba($color-secondary-light, 0.5);
   transition: all 0.5s;
 
+ 
+
   &_text {
     font-size: 1.5rem;
     text-align: left;
@@ -65,6 +68,26 @@
       border-radius: 3px;
       padding: 0 1rem;
       transform: skewX(-12deg) translateY(-3rem);
+    }
+
+    .nav {
+      text-align: center;
+      height: 9rem;
+      margin-top: -3rem;
+    }
+
+    .nav img {
+      width: auto;
+      height: 5rem;
+      border: 1px solid $color-black;
+      margin: 8px 2px;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+
+    .nav img:hover {
+      border: #6ab04c 2px solid;
+      height: 5.5rem;
     }
 
     ul {
@@ -96,16 +119,16 @@
     }
   }
 
-  &.soon{
-    filter: grayscale(.5);
+  &.soon {
+    filter: grayscale(0.5);
 
-    &::before{
+    &::before {
       content: "Proximamente";
       position: absolute;
       font-size: 5rem;
       background-color: $color-primary-transparent;
       color: $color-white;
-      transform: translate(-50%, 90%) rotate(30deg);
+      transform: translate(-10%, 90%) rotate(30deg);
     }
   }
 }
