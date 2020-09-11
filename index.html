@@ -12,6 +12,10 @@
       src="https://kit.fontawesome.com/c6628007fe.js"
       crossorigin="anonymous"
     ></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
     <!-- ESTO ES USANDO COM SERVIDOR CON ARCHIVOS 
       <link rel="stylesheet" href="css/icon-font.css" /> -->
     <link rel="stylesheet" href="css/style.css" />
@@ -142,9 +146,7 @@
     <main>
       <section class="section-about" id="about">
         <div class="u-center-text u-margin-bottom-big">
-          <h2 class="heading-secondary">
-            Quienes Somos?
-          </h2>
+          <h2 class="heading-secondary">Quienes Somos?</h2>
         </div>
 
         <div class="row">
@@ -232,12 +234,11 @@
           <div class="col-1-of-4">
             <div class="feature-box">
               <i class="feature-box__icon fas fa-bicycle"></i>
-              <h3 class="heading-tertiary u-margin-bottom-small">
-                Bicicletas
-              </h3>
+              <h3 class="heading-tertiary u-margin-bottom-small">Bicicletas</h3>
               <p class="feture-box__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sapiente expedita numquam
+                “Para mí, no importa si está lloviendo o si brilla el sol o lo
+                que sea: mientras conduzca una bicicleta, sé que soy el tipo más
+                afortunado del mundo” -Mark Cavendish
               </p>
             </div>
           </div>
@@ -249,8 +250,8 @@
                 Yoga - Meditación
               </h3>
               <p class="feture-box__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sapiente expedita numquam
+                "La meta principal del yoga es la realización del sí mismo o la
+                elevación del cuerpo y la mente hacia el alma" -B. K. S. Iyengar
               </p>
             </div>
           </div>
@@ -262,8 +263,8 @@
                 Ropa deportiva
               </h3>
               <p class="feture-box__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sapiente expedita numquam
+                “Moda es lo que compras, estilo es lo que haces con ella”
+                -Anónimo
               </p>
             </div>
           </div>
@@ -275,8 +276,8 @@
                 Gimnasia en casa
               </h3>
               <p class="feture-box__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sapiente expedita numquam
+                “El éxito es cuando la preparación y la oportunidad se
+                encuentran”. -Bobby Unser
               </p>
             </div>
           </div>
@@ -285,9 +286,7 @@
 
       <section class="section-tours" id="tours">
         <div class="u-center-text u-margin-bottom-big">
-          <h2 class="heading-secondary">
-            Productos
-          </h2>
+          <h2 class="heading-secondary">Productos</h2>
         </div>
 
         <div class="filter-btn">
@@ -685,9 +684,7 @@
         </div>
 
         <div class="u-center-text u-margin-bottom-big">
-          <h2 class="heading-secondary">
-            Nuestros clientes
-          </h2>
+          <h2 class="heading-secondary">Nuestros clientes</h2>
         </div>
 
         <div class="row">
@@ -993,6 +990,25 @@
           bigImg.src = each.src;
         });
       });
+    </script>
+    
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyAs3tSWbZABzPjx5ID0hW7tQYKfV5JxPfM",
+        authDomain: "apus-50731.firebaseapp.com",
+        databaseURL: "https://apus-50731.firebaseio.com",
+        projectId: "apus-50731",
+        storageBucket: "apus-50731.appspot.com",
+        messagingSenderId: "302003779343",
+        appId: "1:302003779343:web:d317e4c737f85fc90d307a",
+        measurementId: "G-TYGG7YX77P",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
     </script>
   </body>
 </html>
