@@ -36,11 +36,11 @@ function renderProduct(doc) {
   //Setting the data form Firestore
   product.setAttribute("data-id", doc.data().tipo);
   img.setAttribute("alt", doc.data().tipo);
-  img.setAttribute("src", doc.data().image1);
+  img.setAttribute("src", doc.data().img1);
   name.textContent = doc.data().nombre;
-  secImg1.setAttribute("src", doc.data().image1);
-  secImg2.setAttribute("src", doc.data().image2);
-  secImg3.setAttribute("src", doc.data().image3);
+  secImg1.setAttribute("src", doc.data().img1);
+  secImg2.setAttribute("src", doc.data().img2);
+  secImg3.setAttribute("src", doc.data().img3);
   secImg1.setAttribute("alt", doc.data().tipo);
   secImg2.setAttribute("alt", doc.data().tipo);
   secImg3.setAttribute("alt", doc.data().tipo);
@@ -76,7 +76,9 @@ function renderProduct(doc) {
   p.appendChild(price);
   small.appendChild(code);
   prodText.appendChild(name);
-  prodText.appendChild(nav);
+  if (doc.data().img2) {
+    prodText.appendChild(nav);
+  }
   prodText.appendChild(ul);
   prodText.appendChild(p);
   prodText.appendChild(small);
@@ -84,12 +86,10 @@ function renderProduct(doc) {
   product.appendChild(prodText);
   container.appendChild(product);
 
+  //For the products filtering
   const buttons = document.querySelector(".buttons").children;
   const products = document.querySelector(".products-container").children;
-  // const container = document.getElementById("image-container");
-  const imgOpt = document.querySelectorAll("#image-option");
 
-  //For the products filtering
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", function () {
       for (let j = 0; j < buttons.length; j++) {
@@ -118,6 +118,8 @@ function renderProduct(doc) {
   }
 
   //For the images inside the popup
+  const imgOpt = document.querySelectorAll("#image-option");
+
   imgOpt.forEach((each) => {
     each.addEventListener("click", () => {
       let bigImg = each.parentNode.parentNode.parentNode.children[0];
@@ -130,6 +132,7 @@ db.collection("productos")
   .get()
   .then((snapshot) => {
     snapshot.docs.forEach((doc) => {
+      console.log(doc.data().img1);
       renderProduct(doc);
     });
   });
