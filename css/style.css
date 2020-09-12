@@ -222,7 +222,8 @@ body {
       width: fit-content;
       border-radius: 3px;
       padding: 0 1rem;
-      transform: skewX(-12deg) translateY(-3rem); }
+      transform: skewX(-12deg) translateY(-3rem);
+      text-transform: uppercase; }
     .product_text .nav {
       text-align: center;
       height: 9rem;
@@ -749,7 +750,7 @@ body {
     transform: translate(-50%, -50%);
     text-align: center; }
     .header__text-box--icon {
-      width: 400px;
+      width: 40rem;
       fill: white;
       margin-bottom: 10rem; }
 

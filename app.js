@@ -129,6 +129,7 @@ function renderProduct(doc) {
 }
 
 db.collection("productos")
+  .orderBy("tipo")
   .get()
   .then((snapshot) => {
     snapshot.docs.forEach((doc) => {
