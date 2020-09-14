@@ -480,7 +480,12 @@
         <div class="row">
           <div class="book">
             <div class="book__form">
-              <form data-netlify="true" name="contacto" action="./success.html" class="form">
+              <form
+                data-netlify="true"
+                name="contacto"
+                action="./success.html"
+                class="form"
+              >
                 <div class="u-margin-bottom-medium">
                   <h2 class="heading-secondary">
                     Reserva tus productos ahora!
@@ -513,7 +518,7 @@
                     type="number"
                     id="phone"
                     class="form__input"
-                    placeholder="Teléfono"                    
+                    placeholder="Teléfono"
                   />
                   <label for="email" class="form__label">Teléfono</label>
                 </div>
@@ -698,7 +703,16 @@
       firebase.analytics();
       const db = firebase.firestore();
     </script>
+    <script>
+      const ham = document.querySelector(".navigation__checkbox");
+      const links = document.querySelectorAll(".navigation__link");
 
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          ham.checked = false;
+        });
+      });
+    </script>
     <script src="./app.js"></script>
   </body>
 </html>
