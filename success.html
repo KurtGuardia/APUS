@@ -8,6 +8,24 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="shortcut icon" type="image/png" href="img/isotipo_green.svg" />
+    <style>
+      @media (min-width: 800px) {
+        body {
+          font-size: x-large;
+        }   
+        .container{
+          margin-top: 5rem;
+        }      
+      }
+      @media (max-width: 800px) {
+        body {
+          font-size: medium;
+        }     
+        .container{
+          margin-top: 0;
+        }   
+      }
+    </style>
     <title>Apus</title>
   </head>
   <body
@@ -17,8 +35,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 97vh;
-      font-size: x-large;
+      height: 97vh;      
     "
   >
     <div
@@ -26,12 +43,12 @@
       style="
         display: flex;
         flex-direction: column;
-        margin-top: 5rem;
         width: 45rem;
         background-color: #ffffff1f;
         padding: 2rem;
       "
     >
+    <img src="./img/imagotipo_white.svg" alt="Apus logo" style="width: 5rem; align-self: center;">
       <h1 class="heading-primary">Mensaje enviado!</h1>
       <h2>Nuestro equipo se pondrá en contacto contigo lo antes posible</h2>
       <h3>
@@ -57,6 +74,13 @@
         ><span style="font-size: xx-large">&#8592;</span> Volver a la página
         principal</a
       >
+      <!-- 
+      <h1>Nuevo mensaje para Apus</h1>
+      <h3>En fecha: </h3>
+      <h3>Nos contacta: </h3>
+      <h3>Con el email: </h3>
+      <h3>Y si dejó teléfono es:</h3>
+      <h3>Su mensaje es:</h3> -->
     </div>
   </body>
 </html>
