@@ -57,7 +57,10 @@ function renderProduct(doc) {
   //Appenging in correct place
   nav.appendChild(secImg1);
   nav.appendChild(secImg2);
-  nav.appendChild(secImg3);
+  if (doc.data().img3) {
+    nav.appendChild(secImg3);
+  }
+
   if (doc.data().char1) {
     ul.appendChild(li1);
   }
@@ -77,6 +80,9 @@ function renderProduct(doc) {
   small.appendChild(code);
   prodText.appendChild(name);
   if (doc.data().img2) {
+    prodText.appendChild(nav);
+  }
+  if (doc.data().img3) {
     prodText.appendChild(nav);
   }
   prodText.appendChild(ul);
@@ -117,7 +123,7 @@ function renderProduct(doc) {
     });
   }
 
-  //For the images inside the popup
+  //For the images inside the options
   const imgOpt = document.querySelectorAll("#image-option");
 
   imgOpt.forEach((each) => {
