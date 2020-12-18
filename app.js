@@ -21,6 +21,10 @@ function renderProduct(doc) {
   let small = document.createElement("small");
   let code = document.createElement("span");
 
+  // let whatsappDiv = document.createElement("div");
+  // let whatsappAnchor = document.createElement("a");
+  // let whatsappIcon = document.createElement("img");
+
   //Adding properties
   product.classList.add("product");
   img.setAttribute("id", "image-container");
@@ -53,6 +57,12 @@ function renderProduct(doc) {
   price.textContent = doc.data().precio;
   small.textContent = "Codigo: ";
   code.textContent = doc.data().codigo;
+
+  // whatsappAnchor.setAttribute(
+  //   "href",
+  //   `https://api.whatsapp.com/send?phone=+34685360189&text=Hola Apus! me interesa ${name.textContent} de codigo ${code.textContent}`
+  // );
+  // whatsappIcon.setAttribute("src", "img/logo-A.png");
 
   //Appenging in correct place
   nav.appendChild(secImg1);
@@ -91,6 +101,10 @@ function renderProduct(doc) {
   product.appendChild(img);
   product.appendChild(prodText);
   container.appendChild(product);
+
+  // whatsappAnchor.appendChild(whatsappIcon);
+  // whatsappDiv.appendChild(whatsappAnchor);
+  // prodText.appendChild(whatsappDiv);
 
   //For the products filtering
   const buttons = document.querySelector(".buttons").children;
@@ -139,7 +153,6 @@ db.collection("productos")
   .get()
   .then((snapshot) => {
     snapshot.docs.forEach((doc) => {
-      console.log(doc.data().img1);
       renderProduct(doc);
     });
   });
