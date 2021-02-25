@@ -359,7 +359,7 @@
         <div class="row">
           <div class="story">
             <figure class="story__shape">
-              <img                
+              <img
                 alt="cliente Marco Luque"
                 class="story__img"
                 src="img/marco.jpg"
@@ -446,34 +446,6 @@
                   ></textarea>
                 </div>
 
-                <!-- <div class="form__group u-margin-bottom-medium">
-                  <div class="form__radio-group">
-                    <input
-                      type="radio"
-                      class="form__radio-input"
-                      id="small"
-                      name="size"
-                    />
-                    <label for="small" class="form__radio-label">
-                      <span class="form__radio-button"></span>
-                      Small tour group
-                    </label>
-                  </div>
-
-                  <div class="form__radio-group">
-                    <input
-                      type="radio"
-                      class="form__radio-input"
-                      id="large"
-                      name="size"
-                    />
-                    <label for="large" class="form__radio-label">
-                      <span class="form__radio-button"></span>
-                      Large tour group
-                    </label>
-                  </div>
-                </div> -->
-
                 <div class="form__group">
                   <button class="btn btn--green" type="submit">
                     Enviar &rarr;
@@ -522,23 +494,6 @@
               "Fallarás el 100% de las cosas que no intentes." <br />
               -Wayne Gretzky
             </p>
-            <!-- <ul class="footer__list">
-              <li class="footer__item">
-                <a href="#" class="footer__link">Company</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Contact us</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Carrers</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Privacy</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Terms</a>
-              </li>
-            </ul> -->
           </div>
         </div>
 
@@ -558,57 +513,18 @@
       </div>
     </footer>
 
-    <!-- THIS WAS SET FOR NATOURS THE ABOVE WAS CREATED FOR APUS -->
-    <!-- <div class="popup" id="popup">
-      <div class="popup__content">
-        <div class="popup__left">
-          <img
-            srcset="img/nat-8.jpg 2000w, img/nat-8.jpg 500w"
-            sizes="(max-width: 900px) 26vw, (max-width: 600px) 21vw, 420px"
-            alt="Tour photo"
-            class="popup__img"
-          />
-          <img
-            srcset="img/nat-9.jpg 2000w, img/nat-9.jpg 500w"
-            sizes="(max-width: 900px) 26vw, (max-width: 600px) 21vw, 420px"
-            alt="Tour photo"
-            class="popup__img"
-          />
-        </div>
-        <div class="popup__right">
-          <a href="#section-tours" class="popup__close">&times;</a>
-          <h2 class="heading-secondary u-margin-bottom-small">
-            Start booking now
-          </h2>
-          <h3 class="heading-tertiary u-margin-bottom-small">
-            Important &ndash; Please read terms before booking
-          </h3>
-          <p class="popup__text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-            dolore doloribus. Delectus deleniti, fugit sed dicta necessitatibus
-            inventore minus aperiam officia quos animi non, rerum neque quas
-            fuga aliquid. Nemo. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Quod, dolore doloribus. Delectus deleniti, fugit
-            sed dicta necessitatibus inventore minus aperiam officia quos animi
-            non, rerum neque quas fuga aliquid. Nemo.
-          </p>
-          <a href="#" class="btn btn--green">Book now</a>
-        </div>
-      </div>
-    </div> -->
-
     <script>
       // Your web app's Firebase configuration
       // For Firebase JS SDK v7.20.0 and later, measurementId is optional
       var firebaseConfig = {
-        apiKey: "AIzaSyAs3tSWbZABzPjx5ID0hW7tQYKfV5JxPfM",
-        authDomain: "apus-50731.firebaseapp.com",
-        databaseURL: "https://apus-50731.firebaseio.com",
-        projectId: "apus-50731",
-        storageBucket: "apus-50731.appspot.com",
-        messagingSenderId: "302003779343",
-        appId: "1:302003779343:web:d317e4c737f85fc90d307a",
-        measurementId: "G-TYGG7YX77P",
+        apiKey: 'AIzaSyAs3tSWbZABzPjx5ID0hW7tQYKfV5JxPfM',
+        authDomain: 'apus-50731.firebaseapp.com',
+        databaseURL: 'https://apus-50731.firebaseio.com',
+        projectId: 'apus-50731',
+        storageBucket: 'apus-50731.appspot.com',
+        messagingSenderId: '302003779343',
+        appId: '1:302003779343:web:d317e4c737f85fc90d307a',
+        measurementId: 'G-TYGG7YX77P',
       };
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
@@ -616,11 +532,11 @@
       const db = firebase.firestore();
     </script>
     <script>
-      const ham = document.querySelector(".navigation__checkbox");
-      const links = document.querySelectorAll(".navigation__link");
+      const ham = document.querySelector('.navigation__checkbox');
+      const links = document.querySelectorAll('.navigation__link');
 
       links.forEach((link) => {
-        link.addEventListener("click", () => {
+        link.addEventListener('click', () => {
           ham.checked = false;
         });
       });

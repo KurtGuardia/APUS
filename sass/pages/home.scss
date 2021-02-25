@@ -1,7 +1,7 @@
 .section-about {
   background-color: $color-grey-light-1;
   padding: 25rem 0;
-  // margin-top: -20vh;   Unused since the photo gallery on the header
+  overflow: hidden;
 
   @include respond(tab-port) {
     padding: 20rem 0;
@@ -20,11 +20,12 @@
   transform: skewY(7deg);
   margin-top: -10rem;
 
-  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em){
-      background-image: linear-gradient(
-      to right bottom,
-      rgba($color-primary-light, 0.815),
-      rgba($color-secondary-dark, 0.8) ),
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.815),
+        rgba($color-secondary-dark, 0.8)
+      ),
       url(../img/yoga-large.jpg);
   }
 
@@ -59,7 +60,7 @@
   .u-center-text {
     background-color: $color-secondary-light-transparent;
     border-radius: 3px;
-    padding: 3rem;    
+    padding: 3rem;
     transform: skewX(-12deg);
     width: fit-content;
     margin: auto;
@@ -67,7 +68,6 @@
       color: white;
       transform: skewX(12deg);
     }
-    
   }
 }
 
